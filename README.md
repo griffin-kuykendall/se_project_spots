@@ -1,14 +1,19 @@
 # Project 3: Spots
 
-### Overview
+Spots is a responsive photo gallery featuring a user profile section. The project showcases a grid of images with titles and like buttons, styled using modern CSS techniques. The layout adjusts gracefully for desktop, tablet, and mobile devices.
 
-- Intro
-- Figma
-- Images
+## Technologies Used
+- HTML (with semantic tags)
+- CSS (Flexbox, Grid, Media Queries)
+- BEM Methodology
+- Responsive Design
+- Normalization with `normalize.css`
 
-**Intro**
-
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+## Features
+- Profile section with avatar, name, and buttons
+- Responsive photo grid with image titles and like buttons
+- Adaptive footer with copyright information
+- Clean, accessible, and maintainable code using BEM
 
 **Figma**
 
@@ -19,3 +24,9 @@ This project is made so all the elements are displayed correctly on popular scre
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
 
 Good luck and have fun!
+
+## Deployment 
+
+This webpage is deployed to GitHub Pages. 
+
+- Deployment Link: https://griffin-kuykendall.github.io/spots/
