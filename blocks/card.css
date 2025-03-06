@@ -30,7 +30,7 @@
 }
 
 .card__like-button {
-  background-image: url(../images/like.icon.svg);
+  background-image: url(../images/like-icon-dark.svg);
   border: none;
   width: 23px;
   height: 20px;
@@ -43,7 +43,7 @@
 }
 
 .card__like-button:hover {
-  opacity: 70%;
+  opacity: 100%;
 }
 
 @media screen and (max-width: 627px) {
@@ -55,10 +55,10 @@
   .card__title {
     max-width: 250px;
     font-size: 16px;
+  }
 
-    .card__like-button {
-      width: 20px;
-      height: 18px;
-    }
+  .card__like-button {
+    width: 20px;
+    height: 18px;
   }
 }

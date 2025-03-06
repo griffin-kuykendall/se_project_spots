@@ -59,7 +59,7 @@
 }
 
 .profile__edit-button:hover {
-  opacity: 70%;
+  opacity: 100%;
 }
 
 .profile__add-button {
@@ -80,6 +80,10 @@
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+.profile__add-button:hover {
+  opacity: 100%;
 }
 
 @media screen and (max-width: 627px) {
@@ -105,22 +109,20 @@
   }
 
   .profile__column {
-    margin: 0 0 32px;
+    margin: 0 0 20px;
   }
 
   .profile__description {
     margin: 0 0 32px;
-
     max-width: 288px;
   }
 
   .profile__edit-button {
     align-self: center;
-    margin-bottom: 16px;
   }
 
   .profile__add-button {
-    margin: 0;
+    margin-top: 0;
     align-self: center;
     width: 288px;
   }
