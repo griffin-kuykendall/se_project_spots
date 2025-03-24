@@ -41,6 +41,11 @@
     background-image: url(../images/closeicon.svg.svg);
     border: none;
     background-color: #fff;
+    cursor: pointer;
+}
+
+.modal__close-button:hover {
+    color: #000;
 }
 
 .modal__title {
@@ -66,6 +71,11 @@ opacity: 70%;
     color: #212121;
 }
 
+.modal__input:hover {
+    cursor: pointer;
+    border-color: #888;
+}
+
 .modal__submit-button {
     width: 156px;
     padding: 18px;
@@ -74,7 +84,9 @@ opacity: 70%;
     color: #fff;
     font-size: 16px;
     line-height: 1;
+    cursor: pointer;
 }
+
 
 @media screen and (max-width: 627px) {
     .modal {
