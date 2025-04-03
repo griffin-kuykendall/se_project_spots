@@ -71,13 +71,24 @@ const initialCards = [
 
   function handleAddCardSubmit(evt) {
     evt.preventDefault();
-    const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
+  
+    const cardNameInput = document.querySelector("#add-card-name-input");
+    const cardLinkInput = document.querySelector("#add-card-link-input");
+
+  
+    const inputValues = {
+      name: cardNameInput.value,
+      link: cardLinkInput.value
+    };
+  
     const cardElement = getCardElement(inputValues);
     cardsContainer.prepend(cardElement);
+  
     cardNameInput.value = "";
     cardLinkInput.value = "";
     closeModal(cardModal);
   }
+  
   
   function getCardElement(data) {
     const cardElement = cardTemplate.querySelector(".card").cloneNode(true);

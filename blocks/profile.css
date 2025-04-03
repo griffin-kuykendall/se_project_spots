@@ -49,7 +49,7 @@
 .profile__edit-button {
   margin-top: auto;
   background-color: #fcf5e5;
-  opacity: 70%;
+  opacity: 1;
   border: none;
   display: flex;
   gap: 8px;
@@ -60,7 +60,7 @@
 }
 
 .profile__edit-button:hover {
-  opacity: 100%;
+  opacity: 0.7;
 }
 
 .profile__add-button {
@@ -84,7 +84,7 @@
 }
 
 .profile__add-button:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 627px) {

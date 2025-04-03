@@ -64,8 +64,8 @@ background-image: url(../images/liked-button-hover.svg);
   border: none;
   background-image: url(../images/trash-icon-default.svg);
   background-size: cover;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   z-index: 1;
 }
