@@ -4,7 +4,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #000000;
+  background-color: #00000080;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,10 +173,10 @@
   }
 
   .modal__close-button_type_preview {
-    top: 6px;
-    right: -22px;
-    width: 24px;
-    height: 24px;
+    top: -33px;
+    right: 4px;
+    width: 40px;
+    height: 40px;
   }
 
   .modal__image {
