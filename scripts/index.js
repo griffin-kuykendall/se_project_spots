@@ -82,9 +82,8 @@ const initialCards = [
   function handleAddCardSubmit(evt) {
     evt.preventDefault();
   
-    const cardNameInput = document.querySelector("#add-card-name-input");
-    const cardLinkInput = document.querySelector("#add-card-link-input");
-
+    const cardNameInput = cardForm.querySelector("#add-card-name-input");
+    const cardLinkInput = cardForm.querySelector("#add-card-link-input");
   
     const inputValues = {
       name: cardNameInput.value,
@@ -94,10 +93,11 @@ const initialCards = [
     const cardElement = getCardElement(inputValues);
     cardsContainer.prepend(cardElement);
   
-    cardNameInput.value = "";
-    cardLinkInput.value = "";
+    cardForm.reset(); 
+    resetValidation(cardForm, validationSettings); 
     closeModal(cardModal);
   }
+  
   
   
   function getCardElement(data) {
@@ -141,8 +141,10 @@ const initialCards = [
   profileEditButton.addEventListener("click", () => {
     editModalNameInput.value = profileName.textContent;
     editModalDescriptionInput.value = profileDescription.textContent;
+    resetValidation(editFormElement, validationSettings); 
     openModal(editModal);
   });
+  
   editModalCloseButton.addEventListener("click", () => { 
     closeModal(editModal);
   });
