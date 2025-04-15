@@ -126,6 +126,21 @@
   border-color: #212121;
 }
 
+.modal__error {
+  display: block; 
+  color: #FF0000;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.modal__error_visible {
+  display: block;
+}
+
+.modal__input_type_error {
+  border: 1px solid #FF0000;
+}
+
 .modal__submit-button {
   width: 156px;
   padding: 18px;
@@ -139,6 +154,11 @@
 
 .modal__submit-button:hover {
   background-color: #424242;
+}
+
+.modal__submit-button_disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 627px) {

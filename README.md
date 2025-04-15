@@ -9,6 +9,7 @@ Spots is a responsive photo gallery featuring a user profile section. The projec
 - BEM Methodology
 - Responsive Design
 - Normalization with `normalize.css`
+- Javascript
 
 ## Features
 

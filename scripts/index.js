@@ -54,12 +54,22 @@ const initialCards = [
   const cardTemplate = document.querySelector("#card-template").content;
   
   function openModal(modal) {
-  modal.classList.add("modal_opened");
-    
+    modal.classList.add("modal_opened");
+    document.addEventListener("keydown", handleEscClose);
   }
   
   function closeModal(modal) {
     modal.classList.remove("modal_opened");
+    document.removeEventListener("keydown", handleEscClose); 
+  }
+
+  function handleEscClose(evt) {
+    if (evt.key === "Escape") {
+      const openedModal = document.querySelector(".modal_opened");
+      if (openedModal) {
+        closeModal(openedModal);
+      }
+    }
   }
   
   function handleEditFormSubmit(evt) {
@@ -150,4 +160,14 @@ const initialCards = [
   const previewModalCloseButton = previewModal.querySelector(".modal__close-button");
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
+});
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal_opened")) {
+      closeModal(modal);
+    }
+  });
 });

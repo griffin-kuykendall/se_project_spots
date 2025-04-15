@@ -6,13 +6,14 @@
     <meta name="author" content="Griffin Kuykendall" />
     <meta
       name="description"
-      content="Responsive photo gallery with user profile, built using HTML, CSS, and BEM."
+      content="Responsive photo gallery with user profile, built using HTML, CSS, BEM, and Javascript."
     />
     <meta
       name="keywords"
       content="HTML, CSS, BEM, Photo Gallery, Responsive Design"
     />
     <link rel="stylesheet" href="./pages/index.css" />
+    <script defer src="./scripts/validation.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
@@ -64,14 +65,18 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form">
+          <form name="edit-profile" class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
-              <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name" />
+              <input id="profile-name-input" type="text" class="modal__input" 
+              placeholder="Type your name" minlength="2" maxlength="40" required/>
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
-              <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself" />
+              <input id="profile-description-input" type="text" class="modal__input" 
+              placeholder="Describe yourself" minlength="2" maxlength="200" required/>
+              <span id="profile-description-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
@@ -82,16 +87,18 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
           <h2 class="modal__title">New Post</h2>
-          <form name="add-card" class="modal__form">
+          <form name="add-card" class="modal__form" novalidate>
             <label for="add-card-link-input" class="modal__label">
               Image link
               <input id="add-card-link-input" type="url" class="modal__input" placeholder="Paste a link to the picture"
-              name="link" />
+              name="link" required/>
+              <span id="add-card-link-input-error" class="modal__error"></span>
             </label>
             <label for="add-card-name-input" class="modal__label">
               Caption
               <input id="add-card-name-input" type="text" class="modal__input" placeholder="Type your caption" 
-              name="name" />
+              name="name" minlength="2" maxlength="30" required/>
+              <span id="add-card-name-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
