@@ -60,10 +60,7 @@ function showInputError(formElement, inputElement, errorMessage, config) {
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
   
     inputList.forEach((inputElement) => {
-      const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-      inputElement.classList.remove(config.inputErrorClass);
-      errorElement.textContent = "";
-      errorElement.classList.remove(config.errorClass);
+      hideInputError(formElement, inputElement, config); 
     });
   
     toggleButtonState(inputList, buttonElement, config);
