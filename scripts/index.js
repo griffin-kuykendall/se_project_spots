@@ -95,7 +95,7 @@ function handleAddCardSubmit(evt) {
   cardsContainer.prepend(cardElement);
 
   cardForm.reset();
-  disableButton(cardFormSubmitButton, validationSettings);
+  disableButton(cardForm, validationSettings);
   closeModal(cardModal);
 }
 
