@@ -76,6 +76,8 @@ function showInputError(formElement, inputElement, errorMessage, config) {
   };
   
   enableValidation(validationSettings);
+
+
   
   
   
