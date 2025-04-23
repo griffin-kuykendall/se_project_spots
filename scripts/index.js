@@ -83,12 +83,6 @@ function handleEditFormSubmit(evt) {
   closeModal(editModal);
 }
 
-function disableButton(form, settings) {
-  const button = form.querySelector(settings.submitButtonSelector);
-  button.disabled = true;
-  button.classList.add(settings.inactiveButtonClass);
-}
-
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 

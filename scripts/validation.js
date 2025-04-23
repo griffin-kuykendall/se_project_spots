@@ -23,15 +23,24 @@ function showInputError(formElement, inputElement, errorMessage, config) {
   function hasInvalidInput(inputList) {
     return inputList.some((inputElement) => !inputElement.validity.valid);
   }
+
+  function disableButton(buttonElement, config) {
+    buttonElement.classList.add(config.inactiveButtonClass);
+    buttonElement.disabled = true;
+  }
+  
+  function enableButton(buttonElement, config) {
+    buttonElement.classList.remove(config.inactiveButtonClass);
+    buttonElement.disabled = false;
+  }  
   
   function toggleButtonState(inputList, buttonElement, config) {
     if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(config.inactiveButtonClass);
-      buttonElement.disabled = true;
+      disableButton(buttonElement, config);
     } else {
-      buttonElement.classList.remove(config.inactiveButtonClass);
-      buttonElement.disabled = false;
+      enableButton(buttonElement, config);
     }
+    
   }
   
   function setEventListeners(formElement, config) {
