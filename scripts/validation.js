@@ -85,6 +85,9 @@ function showInputError(formElement, inputElement, errorMessage, config) {
   };
   
   enableValidation(validationSettings);
+  export { disableButton, resetValidation, validationSettings };
+
+
 
 
   

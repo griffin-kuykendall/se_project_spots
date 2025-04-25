@@ -1,3 +1,7 @@
+import { disableButton, resetValidation, validationSettings } from './validation.js';
+
+
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -27,7 +31,7 @@ const initialCards = [
     name: "Golden Gate Bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
-];
+];``
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalButton = document.querySelector(".profile__add-button");
