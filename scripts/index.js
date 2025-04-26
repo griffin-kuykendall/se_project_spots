@@ -1,7 +1,3 @@
-import { disableButton, resetValidation, validationSettings } from './validation.js';
-
-
-
 const initialCards = [
   {
     name: "Val Thorens",
